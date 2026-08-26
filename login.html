@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student login page</title>
     <link rel="stylesheet" href="./styles/login.css">
+    <script src="./script/login.js"></script>
 </head>
 <body>
 
-    <div class="container">
+    <!--<div class="container">
         <div id="header">
            <h1>Student login</h1>
         </div>
@@ -29,6 +30,144 @@
         <div id="back">
             <a href="./index.html">back to home page</a>
         </div>
-    </div>
+    </div>-->
+    
+    <main class="auth-container">
+
+        <div class="auth-card">
+
+            <!-- Logo -->
+            <div class="brand">
+                <div class="brand-icon">🎓</div>
+                <span>SCHOOL PORTAL</span>
+            </div>
+
+            <!-- Heading -->
+            <div class="heading">
+                <h1 id="formTitle">Sign back in</h1>
+                <p id="formSubtitle">
+                    Enter your matric number and password to continue.
+                </p>
+            </div>
+
+            <!-- User Type -->
+           <!-- 
+            <div class="user-type">
+                <button class="type-btn active" id="studentBtn">
+                    Student
+                </button>
+
+                <button class="type-btn" id="adminBtn">
+                    Admin
+                </button>
+            </div>
+           --> 
+
+            <!-- Auth Form -->
+            <form id="authForm">
+
+                <!-- Student Matric -->
+                <div class="input-group" id="matricGroup">
+                    <label for="matric">Matric Number</label>
+
+                    <input
+                        type="text"
+                        id="matric"
+                        placeholder="e.g. ENG/2023/0142"
+                    >
+                </div>
+
+                <!-- Admin Email -->
+                <div class="input-group hidden" id="emailGroup">
+                    <label for="email">Email Address</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="e.g. admin@school.edu"
+                    >
+                </div>
+
+                <!-- Full Name - Signup Only -->
+                <div class="input-group hidden" id="nameGroup">
+                    <label for="name">Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                    >
+                </div>
+
+                <!-- Password -->
+                <div class="input-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="••••••••"
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            id="showPassword"
+                        >
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="input-group hidden" id="confirmGroup">
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="••••••••"
+                        >
+                    </div>
+                </div>
+
+                <!-- Forgot Password -->
+                <div class="forgot" id="forgotPassword">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <!-- Error -->
+                <div class="message" id="message"></div>
+
+                <!-- Submit -->
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Log in
+                </button>
+
+            </form>
+
+            <!-- Switch Login/Signup -->
+            <div class="switch-auth">
+                <span id="switchText">
+                    Don't have an account?
+                </span>
+
+                <button type="button" id="switchBtn">
+                    <a href="./signup.html">Create account</a>
+                </button>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                ©️ 2026 School Portal
+            </div>
+
+        </div>
+
+    </main>
 </body>
 </html>
