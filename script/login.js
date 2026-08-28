@@ -1,9 +1,4 @@
-/**function loginpg() {
-    window.location.href = "login.html";
-}
-function login() {
-    window.location.href = "dashboard.html";
-}**/
+
 const studentBtn = document.getElementById("studentBtn");
 const adminBtn = document.getElementById("adminBtn");
 
@@ -25,11 +20,23 @@ const forgotPassword = document.getElementById("forgotPassword");
 const showPassword = document.getElementById("showPassword");
 const password = document.getElementById("password");
 
+showPassword.addEventListener("click", () => {
+    if (password.type === "password") {
+        password.type = "text";
+        showPassword.textContent = "Hide";
+    } else {
+        password.type = "password";
+        showPassword.textContent = "Show";
+    }
+});
+
 const authForm = document.getElementById("authForm");
 const message = document.getElementById("message");
 
 let userType = "student";
 let isSignup = false;
+
+
 
 
 /* =========================
@@ -310,3 +317,26 @@ function showSuccess(text) {
 
     message.textContent = text;
 }
+
+// Function to switch between setting tabs
+function openTab(event, tabName) {
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach((content) => content.classList.remove('active'));
+
+  const buttons = document.querySelectorAll('.tab-btn');
+  buttons.forEach((btn) => btn.classList.remove('active'));
+
+  document.getElementById(tabName).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// Example form submit handling (Saves preferences locally)
+document.getElementById('accountForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Account settings updated successfully!');
+});
+
+document.getElementById('examForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Exam preferences saved!');
+});

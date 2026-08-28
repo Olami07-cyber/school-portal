@@ -1,46 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student login page</title>
-    <link rel="stylesheet" href="./styles/login.css">
-    <script src="./script/login.js"></script>
-    <script src="./script/signup.js"></script>
-</head>
-<body>
-
-    <!--<div class="container">
-        <div id="header">
-           <h1>Student login</h1>
-        </div>
-
-        <div id="form">
-            <form>
-              <label for="">MATRIC NUMBER</label><br>
-              <input type="text" placeholder="e.g.2025MEE020"><br><br>
-    
-              <label for="">PASSWORD</label><br>
-              <input type="text" placeholder="Enter your surname"><br><br>
-            </form>
-            <div id="button">
-        <button onclick="login()">LOGIN</button>
-        </div>
-        </div>
-
-        <div id="back">
-            <a href="./index.html">back to home page</a>
-        </div>
-    </div>-->
-
-
-    <main class="auth-container">
+<main class="auth-container">
 
         <div class="auth-card">
 
             <!-- Logo -->
             <div class="brand">
-                <div class="brand-icon">🎓</div>
+                <div class="img">
+                  <img src="./images/our.png" alt="">
+                </div>  
                 <span>SCHOOL PORTAL</span>
             </div>
 
@@ -53,6 +19,7 @@
             </div>
 
             <!-- User Type -->
+           <!-- 
             <div class="user-type">
                 <button class="type-btn active" id="studentBtn">
                     Student
@@ -62,6 +29,7 @@
                     Admin
                 </button>
             </div>
+           --> 
 
             <!-- Auth Form -->
             <form id="authForm">
@@ -144,8 +112,8 @@
                 <div class="message" id="message"></div>
 
                 <!-- Submit -->
-                <button type="submit" class="submit-btn" id="submitBtn">
-                    Sign in
+                <button type="submit" class="submit-btn" id="submitBtn" onclick="log()">
+                    Log in
                 </button>
 
             </form>
@@ -157,7 +125,7 @@
                 </span>
 
                 <button type="button" id="switchBtn">
-                    Create account
+                    <a href="./signup.html">Create account</a>
                 </button>
             </div>
 
@@ -169,11 +137,3 @@
         </div>
 
     </main>
-
-    <script src="script.js"></script>
-
-</body>
-</html>
-    
-</body>
-</html>

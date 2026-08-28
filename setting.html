@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/dashboard.c">
+    <link rel="stylesheet" href="./styles/login.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li><a href="./dashboard.html">Dashboard</a></li>
+            <li><a href="">Academics</a></li>
+            <li><a href="">Exam Results</a></li>
+            <li><a href="https://chatgpt.com/auth/login?utm_source=chatgpt.com">AI Resources</a></li>
+            <li><a href="">Study Material</a></li>
+            <li><a href="">Profile</a></li>
+            <li><a href="./setting.html">Setting</a></li>
+            
+            <li><a href="./login.html">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <div class="portal-container">
+    <!-- Main Content Area -->
+    <main class="content">
+      <header class="content-header">
+        <h2>Settings</h2>
+        <p>Manage your account preferences and exam configurations.</p>
+      </header>
+
+      <!-- Settings Navigation Tabs -->
+      <div class="settings-tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'account')">Account</button>
+        <button class="tab-btn" onclick="openTab(event, 'exam')">Exam Preferences</button>
+        <button class="tab-btn" onclick="openTab(event, 'notifications')">Notifications</button>
+      </div>
+
+      <!-- Tab Content: Account Settings -->
+      <div id="account" class="tab-content active">
+        <form class="settings-form" id="accountForm">
+          <div class="form-group">
+            <label for="username">Full Name</label>
+            <input type="text" id="username" value="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" value="student@school.edu" required />
+          </div>
+          <div class="form-group">
+            <label for="password">New Password</label>
+            <input type="password" id="password" placeholder="Enter new password" />
+          </div>
+          <button type="submit" class="save-btn">Save Changes</button>
+        </form>
+      </div>
+
+      <!-- Tab Content: Exam Preferences -->
+      <div id="exam" class="tab-content">
+        <form class="settings-form" id="examForm">
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="timerAlert" checked />
+              Enable warning sound when 5 minutes remain in exam
+            </label>
+          </div>
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="autoSubmit" checked />
+              Auto-submit exam when time expires
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="fontSize">Default Exam Font Size</label>
+            <select id="fontSize">
+              <option value="small">Small</option>
+              <option value="medium" selected>Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+          <button type="submit" class="save-btn">Save Preferences</button>
+        </form>
+      </div>
+
+      <!-- Tab Content: Notifications -->
+      <div id="notifications" class="tab-content">
+        <form class="settings-form" id="notifForm">
+          <div class="form-group checkbox-group">
+            <label>
+              <input type="checkbox" id="emailNotif" checked />
+              Receive exam score updates via email
+            </label>
+          </div>
+          <button type="submit" class="save-btn">Save Preferences</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="./script/login.js"></script>
+</body>
+</html> 
+</body>
+</html>
