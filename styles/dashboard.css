@@ -8,15 +8,18 @@ body{
     min-height: 100vh;
     background-color: lightblue;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 270px;
+    color: #0077b6;
 }
 nav{
-    background-color: white;
+    background-color: lightblue;
     box-shadow: 3px 2px 5px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
     left: 0;
     width: 250px;
     height: 100vh;
+    color: #0077b6;
 }
 
 nav ul{
@@ -33,6 +36,12 @@ nav ul li a{
     transition: 0.3s;
     padding: 0 30px;
     height: 60px;
+}
+nav ul li a ion-icon{
+    margin-right: 15px;
+}
+nav ul li a i{
+    margin-right: 15px;
 }
 
 nav ul li a:hover{
@@ -52,6 +61,7 @@ nav ul li:first-child a{
     align-items: flex-start;
     justify-content: flex-start;
     height: 100%;
+    color: #0077b6;
 }
 
 nav ul a{
@@ -64,4 +74,64 @@ nav ul a{
     height: 50px;
     font-size: 16px;
     transition: 0.3;
+}
+.studymaterials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.material-card {
+    background-color: #e6e2ce;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e5e5e5;
+}
+
+.pdf-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.material-card h2 {
+    color: #10244a;
+    margin-bottom: 8px;
+}
+
+.material-card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.material-buttons {
+    display: flex;
+    gap: 10px;
+    color: white;
+}
+
+.material-buttons a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.material-buttons a:first-child {
+    background-color: #10244a;
+    color: white;
+}
+
+.material-buttons a:last-child {
+    border: 1px solid #10244a;
+    color: #10244a;
+}
+#today-date {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+#current-time {
+    font-size: 28px;
+    font-weight: bold;
 }

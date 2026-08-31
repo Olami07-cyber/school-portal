@@ -1,0 +1,144 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: block;
+    min-height: 100vh;
+}
+
+/**#home_icon {
+    padding-right: 12px;
+}
+
+.mainsection {
+    margin-left: 200px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.mainsection ion-icon {
+    font-size: 100px;
+}
+.info-card {
+    background-color: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    padding: 25px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card-title span {
+    font-size: 24px;
+}
+
+.card-title h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #151535;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: #555;
+    font-size: 15px;
+}
+
+.value {
+    color: #151535;
+    font-weight: 500;
+    font-size: 15px;
+}**/
+.main-content {
+    padding: 40px;
+}
+
+/* PROFILE AT THE TOP */
+.profile-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-icon {
+    font-size: 80px;
+}
+
+.profile-header h1 {
+    margin: 10px 0 5px;
+    color: #10244a;
+}
+
+.profile-header p {
+    margin: 5px;
+}
+
+
+/* TWO CARDS SIDE BY SIDE */
+.information-container {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+
+/* EACH CARD */
+.info-card {
+    background: white;
+    width: 45%;
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+}
+
+
+/* CARD TITLE */
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.card-title h2 {
+    font-size: 20px;
+    margin: 0;
+    color: #10244a;
+}
+
+
+/* INFORMATION ROWS */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.info-row span:last-child {
+    font-weight: 500;
+    text-align: right;
+}
