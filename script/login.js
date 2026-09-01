@@ -340,3 +340,146 @@ document.getElementById('examForm').addEventListener('submit', (e) => {
   e.preventDefault();
   alert('Exam preferences saved!');
 });
+
+
+// ================================
+// OPEN PROFILE
+// ================================
+
+function showProfile() {
+
+    // Hide other dashboard sections
+    document.querySelectorAll(".dashboard-section").forEach(section => {
+        section.style.display = "none";
+    });
+
+    // Show profile
+    const profile = document.getElementById("profileSection");
+
+    if (profile) {
+        profile.style.display = "block";
+    }
+
+    // Remove active from menu
+    document.querySelectorAll(".menu").forEach(menu => {
+        menu.classList.remove("active");
+    });
+
+    // Add active to Profile
+    const profileMenu = document.getElementById("profileMenu");
+
+    if (profileMenu) {
+        profileMenu.classList.add("active");
+    }
+}
+
+
+// ================================
+// EDIT PROFILE
+// ================================
+
+function editProfile() {
+
+    document.getElementById("editName").value =
+        document.getElementById("fullName").textContent;
+
+    document.getElementById("editEmail").value =
+        document.getElementById("email").textContent;
+
+    document.getElementById("editPhone").value =
+        document.getElementById("phone").textContent;
+
+    document.getElementById("editDepartment").value =
+        document.getElementById("department").textContent;
+
+    document.getElementById("profileModal").style.display = "flex";
+}
+
+
+// ================================
+// CLOSE MODAL
+// ================================
+
+function closeProfileModal() {
+
+    document.getElementById("profileModal").style.display = "none";
+}
+
+
+// ================================
+// SAVE PROFILE
+// ================================
+
+function saveProfile() {
+
+    const name =
+        document.getElementById("editName").value;
+
+    const email =
+        document.getElementById("editEmail").value;
+
+    const phone =
+        document.getElementById("editPhone").value;
+
+    const department =
+        document.getElementById("editDepartment").value;
+
+
+    // Update profile information
+    document.getElementById("fullName").textContent = name;
+
+    document.getElementById("displayName").textContent = name;
+
+    document.getElementById("email").textContent = email;
+
+    document.getElementById("phone").textContent = phone;
+
+    document.getElementById("department").textContent = department;
+
+
+    // Close modal
+    closeProfileModal();
+
+    alert("Profile updated successfully!");
+}
+
+
+// ================================
+// CHANGE PROFILE PICTURE
+// ================================
+
+function changeProfilePicture(event) {
+
+    const file = event.target.files[0];
+
+    if (!file) {
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+
+        document.getElementById("profileImage").src =
+            e.target.result;
+
+    };
+
+    reader.readAsDataURL(file);
+}
+
+
+// ================================
+// CLOSE MODAL WHEN CLICKING OUTSIDE
+// ================================
+
+window.onclick = function(event) {
+
+    const modal =
+        document.getElementById("profileModal");
+
+    if (event.target === modal) {
+        closeProfileModal();
+    }
+
+};
