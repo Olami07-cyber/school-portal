@@ -4,34 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
-    <link rel="stylesheet" href="./styles/dashboard.c">
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="../assets/styles/portal.css">
+    <link rel="stylesheet" href="../assets/styles/settings.css">
+    <script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
-<body>
-    <nav>
+<body class="portal-page">
+    <nav class="portal-nav">
         <ul class="sidebar">
-             <h3>SCHOOL PORTAL</h3>
-            <li><a href="./dashboard.html">Dashboard</a></li>
-            <li><a href="">Academics</a></li>
-            <li><a href="">Exam Results</a></li>
-            <li><a href="https://chatgpt.com/auth/login?utm_source=chatgpt.com">AI Resources</a></li>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <li><a href="">Study Material</a></li>
-=======
-            <li><a href="./study material.html">Study Material</a></li>
->>>>>>> d2e447614a91e7885bdb3a523f7deb90577b977e
-=======
-            <li><a href="./study material.html">Study Material</a></li>
->>>>>>> d2e447614a91e7885bdb3a523f7deb90577b977e
-            <li><a href="./profile.html">Profile</a></li>
-            <li><a href="./setting.html">Setting</a></li>
+            <h3>SCHOOL PORTAL</h3>
+            <li><a href="./dashboard.html"><ion-icon name="home"></ion-icon>Dashboard</a></li>
+            <li><a href="./academics.html"> <i class="fa-solid fa-graduation-cap"></i>Academics</a></li>
+            <li><a href="./exam-results.html"><i class="fa-solid fa-file-pen"></i>Exam Results</a></li>
+            <li><a href="https://chatgpt.com/auth/login?utm_source=chatgpt.com"><i class="fa-solid fa-brain"></i>AI Resources</a></li>
+            <li><a href="./study-materials.html"> <ion-icon name="book"></ion-icon> Study Material</a></li>
+            <li><a href="./profile.html"><ion-icon name="person"></ion-icon>  Profile</a></li>
+            <li><a href="./settings.html" aria-current="page"><ion-icon name="settings"></ion-icon>  Settings</a></li>
             
-            <li><a href="./login.html">Log Out</a></li>
+            <li><a href="./login.html"><i class="fa-solid fa-right-from-bracket"></i>Log Out</a></li>
         </ul>
     </nav>
-
-    <div class="portal-container">
+    <div class="portal-main portal-container">
     <!-- Main Content Area -->
     <main class="content">
       <header class="content-header">
@@ -107,8 +101,6 @@
     </main>
   </div>
 
-  <script src="./script/login.js"></script>
-</body>
-</html> 
+  <script src="../assets/scripts/settings.js"></script>
 </body>
 </html>

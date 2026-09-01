@@ -1,0 +1,16 @@
+.mainsection { padding: 36px; }
+.welcome { margin-bottom: 28px; }
+.welcome h1 { margin: 0; color: var(--portal-navy); font-size: 30px; }
+.studymaterials { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.material-card { display: flex; min-height: 196px; padding: 24px; border: 1px solid var(--portal-border); border-radius: 8px; background: var(--portal-surface); box-shadow: 0 2px 8px rgba(16, 42, 67, 0.05); flex-direction: column; }
+.pdf-icon { margin-bottom: 14px; color: var(--portal-blue); font-size: 32px; line-height: 1; }
+.material-card h2 { margin: 0 0 8px; color: var(--portal-navy); font-size: 18px; }
+.material-card p { margin: 0; color: var(--portal-muted); line-height: 1.5; }
+#current-time { margin-top: 4px; color: var(--portal-navy); font-size: 24px; font-weight: 700; }
+.material-buttons { display: flex; gap: 8px; margin-top: auto; padding-top: 20px; flex-wrap: wrap; }
+.material-buttons a { padding: 9px 12px; border: 1px solid var(--portal-blue); border-radius: 5px; color: var(--portal-blue-dark); font-size: 14px; font-weight: 700; text-decoration: none; }
+.material-buttons a:first-child { background: var(--portal-blue); color: #fff; }
+.material-buttons a:hover { background: var(--portal-sky); }
+.material-buttons a:first-child:hover { background: var(--portal-blue-dark); }
+@media (max-width: 1080px) { .studymaterials { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .mainsection { padding: 24px 18px; } .studymaterials { grid-template-columns: 1fr; } .material-card { min-height: 170px; } }

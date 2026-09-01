@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="../assets/styles/portal.css">
+        <link rel="stylesheet" href="../assets/styles/dashboard.css">
+        <script type="module"
+            src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    </head>
+    <body class="portal-page">
+        <nav class="portal-nav">
+            <ul class="sidebar">
+                <h3>SCHOOL PORTAL</h3>
+                <li><a href="./dashboard.html" aria-current="page"><ion-icon
+                            name="home"></ion-icon>Dashboard</a></li>
+                <li><a href="./academics.html"> <i
+                            class="fa-solid fa-graduation-cap"></i>Academics</a></li>
+                <li><a href="./exam-results.html"><i class="fa-solid fa-file-pen"></i>Exam
+                        Results</a></li>
+                <li><a
+                        href="https://chatgpt.com/auth/login?utm_source=chatgpt.com"><i
+                            class="fa-solid fa-brain"></i>AI Resources</a></li>
+                <li><a href="./study-materials.html"> <ion-icon
+                            name="book"></ion-icon> Study Material</a></li>
+                <li><a href="./profile.html"><ion-icon name="person"></ion-icon>
+                        Profile</a></li>
+                <li><a href="./settings.html"><ion-icon
+                            name="settings"></ion-icon> Settings</a></li>
+
+                <li><a href="./login.html"><i
+                            class="fa-solid fa-right-from-bracket"></i>Log
+                        Out</a></li>
+            </ul>
+        </nav>
+        <main class="mainsection">
+            <div class="welcome">
+                <h1>Welcome student!</h1>
+            </div>
+            <div class="studymaterials">
+                <div class="material-card">
+
+                    <h2>Today's Date</h2>
+                    <p id="today-date"></p>
+                    <p id="current-time"></p>
+
+                </div>
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon
+                            name="calendar-outline"></ion-icon> </div>
+
+                    <h2>Upcoming exams</h2>
+                    <p> None</p>
+
+                </div>
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon
+                            name="book"></ion-icon></div>
+
+                    <h2>CHM 102</h2>
+                    <p>In organic chemistry </p>
+
+                    <div class="material-buttons">
+                        <a
+                            href="../assets/study-materials/CHM 102 (INORGANIC) ENOTE 2019-2020 RS-2.pdf"
+                            target="_blank">
+                            View PDF
+                        </a>
+
+                        <a
+                            href="../assets/study-materials/CHM 102 (INORGANIC) ENOTE 2019-2020 RS-2.pdf"
+                            download>
+                            Download
+                        </a>
+                        <a href="./study-materials.html">See more</a>
+                    </div>
+                </div>
+
+                <div class="material-card">
+                    <div class="pdf-icon">
+                        <ion-icon name="hardware-chip-outline"></ion-icon>
+                    </div>
+
+                    <h2>AI resources</h2>
+                    <p>Get AI-powered help with your studies</p>
+
+                </div>
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon
+                            name="document-text-outline"></ion-icon></div>
+
+                    <h2>Exam Results</h2>
+                    <p> NILL</p>
+
+                </div>
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon name="calendar-outline"></ion-icon></div>
+
+                    <h2>Upcoming exams</h2>
+                    <p> None</p>
+
+                </div>
+
+            </div>
+
+            <script>
+    function updateDateTime() {
+    const now = new Date();
+
+    const dateOptions = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
+
+    document.getElementById("today-date").textContent =
+        now.toLocaleDateString("en-US", dateOptions);
+
+    document.getElementById("current-time").textContent =
+        now.toLocaleTimeString();
+}
+
+updateDateTime();
+
+setInterval(updateDateTime, 1000);
+ </script>
+        </main>
+        </body>
+    </html>

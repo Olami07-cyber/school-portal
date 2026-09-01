@@ -1,0 +1,40 @@
+.profile-section { padding: 36px; }
+.profile-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+.profile-header h1 { margin: 0; color: var(--portal-navy); font-size: 30px; }
+.profile-header p { margin: 8px 0 0; color: var(--portal-muted); }
+.edit-btn, .save-btn { min-height: 42px; padding: 0 18px; border: 0; border-radius: 6px; background: var(--portal-blue); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+.edit-btn:hover, .save-btn:hover { background: var(--portal-blue-dark); }
+.profile-container { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 20px; }
+.profile-card, .information-card, .academic-card { border: 1px solid var(--portal-border); border-radius: 8px; background: var(--portal-surface); box-shadow: 0 2px 8px rgba(16, 42, 67, 0.05); }
+.profile-card { padding: 30px 20px; text-align: center; }
+.profile-image-container { position: relative; width: 120px; height: 120px; margin: 0 auto; }
+.profile-image-container img { width: 120px; height: 120px; border: 4px solid var(--portal-blue); border-radius: 50%; object-fit: cover; }
+.camera-btn { position: absolute; right: 0; bottom: 2px; display: grid; width: 34px; height: 34px; border-radius: 50%; place-items: center; background: var(--portal-blue); color: #fff; cursor: pointer; }
+#imageUpload { display: none; }
+.profile-card h2 { margin: 18px 0 4px; color: var(--portal-navy); font-size: 20px; }
+.profile-card p { margin: 0; color: var(--portal-muted); font-size: 14px; }
+.student-status { display: inline-block; margin-top: 14px; padding: 6px 10px; border-radius: 999px; background: #e9f8ef; color: var(--portal-success); font-size: 12px; font-weight: 700; }
+.information-card, .academic-card { padding: 28px; }
+.information-card h2, .academic-card h2 { margin: 0 0 24px; color: var(--portal-navy); font-size: 20px; }
+.info-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.info-item label { display: block; margin-bottom: 6px; color: var(--portal-muted); font-size: 13px; font-weight: 700; }
+.info-item p { margin: 0; color: var(--portal-text); font-weight: 600; }
+.academic-card { margin-top: 20px; }
+.academic-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.academic-item { padding: 18px; border-radius: 6px; background: var(--portal-sky); }
+.academic-item span { display: block; margin-bottom: 8px; color: var(--portal-muted); font-size: 13px; }
+.academic-item strong { color: var(--portal-navy); font-size: 17px; }
+.academic-item .approved { color: var(--portal-success); }
+.profile-modal { display: none; position: fixed; inset: 0; z-index: 20; align-items: center; justify-content: center; padding: 20px; background: rgba(16, 42, 67, 0.48); }
+.modal-content { width: min(480px, 100%); padding: 26px; border-radius: 8px; background: #fff; box-shadow: 0 16px 40px rgba(16, 42, 67, 0.25); }
+.modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.modal-header h2 { margin: 0; color: var(--portal-navy); font-size: 20px; }
+.modal-header button { border: 0; background: transparent; color: var(--portal-text); font-size: 28px; cursor: pointer; }
+.profile-modal .form-group { margin-bottom: 16px; }
+.profile-modal label { display: block; margin-bottom: 7px; color: var(--portal-text); font-size: 14px; font-weight: 700; }
+.profile-modal input { width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid var(--portal-border); border-radius: 6px; font: inherit; }
+.profile-modal input:focus { border-color: var(--portal-blue); outline: 3px solid rgba(29, 112, 184, 0.16); }
+.modal-buttons { display: flex; justify-content: flex-end; gap: 10px; margin-top: 22px; }
+.cancel-btn { min-height: 42px; padding: 0 18px; border: 1px solid var(--portal-border); border-radius: 6px; background: #fff; color: var(--portal-text); font: inherit; font-weight: 700; cursor: pointer; }
+@media (max-width: 900px) { .profile-container { grid-template-columns: 1fr; } .academic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .profile-section { padding: 24px 18px; } .profile-header { align-items: flex-start; flex-direction: column; } .info-grid, .academic-grid { grid-template-columns: 1fr; } .edit-btn { width: 100%; } }
