@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Form</title>
+
+    <style>
+        ul li{
+            list-style-type: none;
+            
+        }
+        * {
+
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: gainsboro;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: lightblue;
+            padding: 50px 60px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            color: #333;
+        }
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form input[type="password"]
+ {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+  
+
+         button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: grey;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;}
+
+            button[type="submit"]:hover {
+            background-color: darkgrey;}
+    </style>
+
+</head>
+<body>
+    <form action="">
+        <h1>Lecturer's Onboarding Form</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <label for="courses">Courses:</label>
+        <ul>
+            <li><input type="checkbox" id="course1" name="courses" value="course1">CHM 202</li>
+            <li><input type="checkbox" id="course2" name="courses" value="course2">CHM 203</li>
+            <li><input type="checkbox" id="course3" name="courses" value="course3">CHM 204</li>
+        </ul>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const courses = Array.from(document.querySelectorAll('input[name="courses"]:checked')).map(checkbox => checkbox.value);
+
+            // Create an object to hold the form data
+            const formData = {
+                name,
+                email,
+                password,
+                courses
+            };
+
+            // Log the form data to the console (you can replace this with your own logic)
+            console.log('Form Data:', formData);
+
+            // Optionally, you can send the data to a server using fetch or XMLHttpRequest here
+        });
+    </script>
+</body>
+</html>

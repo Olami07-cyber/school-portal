@@ -1,12 +1,21 @@
-<main class="auth-container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student's/Lecturer's login page</title>
+    <link rel="stylesheet" href="../assets/styles/login.css">
+    <script src="../assets/scripts/login.js" defer></script>
+</head>
+<body>
+
+    <main class="auth-container">
 
         <div class="auth-card">
 
             <!-- Logo -->
             <div class="brand">
-                <div class="img">
-                  <img src="./images/our.png" alt="">
-                </div>  
+                <div class="brand-icon">🎓</div>
                 <span>SCHOOL PORTAL</span>
             </div>
 
@@ -19,17 +28,15 @@
             </div>
 
             <!-- User Type -->
-           <!-- 
             <div class="user-type">
                 <button class="type-btn active" id="studentBtn">
                     Student
                 </button>
 
                 <button class="type-btn" id="adminBtn">
-                    Admin
+                    Lecturer
                 </button>
             </div>
-           --> 
 
             <!-- Auth Form -->
             <form id="authForm">
@@ -112,8 +119,8 @@
                 <div class="message" id="message"></div>
 
                 <!-- Submit -->
-                <button type="submit" class="submit-btn" id="submitBtn" onclick="log()">
-                    Log in
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    Sign in
                 </button>
 
             </form>
@@ -125,7 +132,7 @@
                 </span>
 
                 <button type="button" id="switchBtn">
-                    <a href="./signup.html">Create account</a>
+                    Create account
                 </button>
             </div>
 
@@ -137,3 +144,6 @@
         </div>
 
     </main>
+
+</body>
+</html>

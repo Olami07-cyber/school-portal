@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecturer's Dashboard</title>
+    
+
+    <script type="module"
+            src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule
+            src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="../assets/styles/dashboard.css">
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f7fb;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+          .sidebar {
+                width: 300px;
+                background-color: blue;
+                padding: 20px;
+                height: 100vh;
+                position: fixed;
+                left: 0;
+                top: 0;
+                overflow-y: auto;
+                list-style: none;
+            }
+
+            .sidebar li a {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                text-decoration: none;
+                color: white;
+                margin-bottom: 20px;
+                border-radius: 5px;
+            }
+
+            .sidebar li a ion-icon,
+            .sidebar li a i {
+                margin-right: 10px;
+               
+            }
+
+            .sidebar li a:hover {
+                background-color: lightblue;
+                color: black;
+            }
+            .sidebar h3 {
+                color: #fff;
+                margin-bottom: 20px;
+            }
+
+            .sidebar li a[aria-current="page"] {
+                background-color: #eaf4fb;
+                color: #1d70b8;
+            }
+            
+            .sidebar li a :last-child{
+                
+            }
+            .mainsection {
+                margin-left: 320px;
+                padding: 20px;
+                width: calc(100% - 320px);
+            }
+            </style>
+</head>
+<body>
+    <nav class="portal-nav">
+            <ul class="sidebar">
+                <h3>LECTURER'S PORTAL</h3>
+                <li><a href="" aria-current="page"><ion-icon
+                            name="home"></ion-icon>Dashboard</a></li>
+
+
+                <li><a href=""><ion-icon
+                            name="book"></ion-icon> My Courses</a></li>
+
+                <li><a href=""> <ion-icon
+                            name="people"></ion-icon> Students</a></li>
+
+                <li><a href=""> <ion-icon
+                            name="school"></ion-icon> Academics</a></li>
+
+
+                <li><a href=""><ion-icon
+                            name="document-text"></ion-icon> Exam
+                        Results</a></li>
+                
+                <li><a href=""> <ion-icon
+                            name="book-outline"></ion-icon> Study Material</a></li>
+
+                <li><a href=""> <ion-icon
+                            name="time"></ion-icon> Schedule</a></li>
+
+                <li><a href=""><ion-icon name="person"></ion-icon>
+                        Profile</a></li>
+
+
+                <li><a href="."><ion-icon
+                            name="settings"></ion-icon> Settings</a></li>
+
+                <li><a href="./login.html"><ion-icon
+                            name="log-out"></ion-icon>Log
+                        Out</a></li>
+            </ul>
+        </nav>
+        <main class="mainsection">
+            <div class="welcome">
+                <h1>Welcome lecturer!</h1>
+            </div>
+            <div class="studymaterials">
+                
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon
+                            name="calendar-outline"></ion-icon> </div>
+
+                    <h2>Scheduled Exams</h2>
+                    <p> None</p>
+
+                </div>
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon
+                            name="book"></ion-icon></div>
+
+                    <h2>Students performance</h2>
+                    <p>NILL</p>
+
+                    <div class="material-buttons">
+                        <a
+                            href="../assets/study-materials/CHM 102 (INORGANIC) ENOTE 2019-2020 RS-2.pdf"
+                            target="_blank">
+                            View PDF
+                        </a>
+
+                        <a
+                            href="../assets/study-materials/CHM 102 (INORGANIC) ENOTE 2019-2020 RS-2.pdf"
+                            download>
+                            Download
+                        </a>
+                        <a href="./study-materials.html">See more</a>
+                    </div>
+                </div>
+
+                
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon
+                            name="document-text-outline"></ion-icon></div>
+
+                    <h2>Exam Results</h2>
+                    <p> NILL</p>
+
+                </div>
+                <div class="material-card">
+                    <div class="pdf-icon"><ion-icon name="calendar-outline"></ion-icon></div>
+
+                    <h2>Upcoming exams</h2>
+                    <p> None</p>
+
+                </div>
+
+            </div>
+
+            <script>
+    function updateDateTime() {
+    const now = new Date();
+
+    const dateOptions = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
+
+    document.getElementById("today-date").textContent =
+        now.toLocaleDateString("en-US", dateOptions);
+
+    document.getElementById("current-time").textContent =
+        now.toLocaleTimeString();
+}
+
+updateDateTime();
+
+setInterval(updateDateTime, 1000);
+ </script>
+        </main>
+
+        
+</body>
+</html>
